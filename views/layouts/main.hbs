@@ -20,6 +20,7 @@
     <div class="container">
         {{{body}}}
     </div>
+    {{> _footer}}
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.15.0/ckeditor.js"
@@ -48,13 +49,17 @@
     <script src="/js/cwbRealTimeWeatherAPI.js"></script>
     <script src="/js/googleMap.js"></script>
     <script>
-      // const APIKey = "CWB-3368DCAB-74F5-4D48-82F3-DA9B5699CE79";
-      const distsTarget = ["林口", "龜山"];
-      let w = new RealTimeWeather(
-        document.querySelector("#realTime-weather"),
-        distsTarget,
-        APIKey
-      );
+      const body = document.addEventListener("DOMContentLoaded", init);
+      function init(){
+        // const APIKey = "CWB-3368DCAB-74F5-4D48-82F3-DA9B5699CE79";
+        const distsTarget = ["林口", "龜山"];
+        let w = new RealTimeWeather(
+          document.querySelector("#realTime-weather"),
+          distsTarget,
+          APIKey
+        );
+        startTime();      
+      }
       function ffff() {
         $.ajax({
             type: "POST",

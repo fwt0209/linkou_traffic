@@ -1,5 +1,5 @@
 .container {
-  max-width: 1235px;
+  max-width: 1204px;
 }
 
 .box {
@@ -12,10 +12,10 @@ iframe {
   display: block;
 }
 
-.h_margin {
-  margin-bottom: 0;
-  padding-bottom: 0.5rem;
+.flex_direction {
+  flex-direction: column;
 }
+
 p {
   margin: 10px 0 !important;
 }
@@ -41,8 +41,8 @@ p {
 
 .fixed-btn {
   position: fixed;
-  right: 23px;
-  bottom: 23px;
+  right: 50px;
+  bottom: 50px;
   z-index: 997;
 }
 
