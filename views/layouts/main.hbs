@@ -28,9 +28,23 @@
         crossorigin="anonymous"></script>
 
     <script>
-        CKEDITOR.replace("body", {
-            plugins: "wysiwygarea, toolbar, basicstyles, link"
-        })
+        let notification;
+        const editor = CKEDITOR.replace("body", {
+            plugins: "wysiwygarea, toolbar, basicstyles, link",
+            extraPlugins: 'notification'
+        });
+        editor.once( 'instanceReady', function(){
+          // Create and show the notification.
+          notification = new CKEDITOR.plugins.notification(editor,{
+            message: '請填寫這個欄位。',
+            type: 'info'
+          });
+        } );
+        editor.on("required", function(e){          
+          notification.show();
+          editor.focus();
+          e.cancel();
+        });
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"

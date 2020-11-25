@@ -2,13 +2,13 @@
 <h3 class="pt-3">XXXX</h3>
 <hr>
 <div class="alert alert-primary" role="alert">
-  謝謝您為生活盡一份力。
+  謝謝您為彼此分享路況。
 </div>
 <form  class="pt-3" action="/stories" method="post">
     <div class="row form-group">          
-      <label class="col-1 col-form-label" for="title">位置:</label>            
+      <label class="col-1 col-form-label" for="title">位置: *</label>            
       <div class="col-11">
-        <input class="form-control" type="text" id="title" name="title" value="" placeholder="ex: 文化一路/國道南下路口，往長庚醫院方向">  
+        <input class="form-control" type="text" id="title" name="title" value="" required placeholder="ex: 文化一路/國道南下路口，往長庚醫院方向">  
       </div>
     </div>
     <div class="row form-group">
@@ -25,9 +25,11 @@
       </div>      
     </div>
     <div class="form-group">
-      <h5>說明:</h5>
-      <textarea name="body" id="body"></textarea>
+      <h5>說明: *</h5>
+      <textarea class="form-control" name="body" id="body" required></textarea>
     </div>
+
+    <span>* 必填欄位</span>
     <div class="form-group">
       <input type="submit" value="Save" class="btn">
       <a href="/dashboard" class="btn orange">Cancel</a>
