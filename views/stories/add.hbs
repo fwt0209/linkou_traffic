@@ -2,36 +2,45 @@
 <h3 class="pt-3">XXXX</h3>
 <hr>
 <div class="alert alert-primary" role="alert">
-  謝謝您為彼此分享路況。
+  {{!-- 謝謝您為彼此分享路況。 --}}
+  OOOO
 </div>
-<form  class="pt-3" action="/stories" method="post">
+<form  class="pt-3" action="/linkou" method="post">
     <div class="row form-group">          
-      <label class="col-1 col-form-label" for="title">位置: *</label>            
+      {{!-- <label class="col-1 col-form-label" for="location">位置: *</label>             --}}
+      <label class="col-1 col-form-label" for="location">L: *</label>            
       <div class="col-11">
-        <input class="form-control" type="text" id="title" name="title" value="" required placeholder="ex: 文化一路/國道南下路口，往長庚醫院方向">  
+        {{!-- <input class="form-control" type="text" id="location" name="location" value="" required placeholder="ex: 文化一路/國道南下路口，往長庚醫院方向">   --}}
+        <input class="form-control" type="text" id="location" name="location" value="" required placeholder="">  
       </div>
     </div>
     <div class="row form-group">
-      <label class="col-1 col-form-label" for="status">分類:</label>
+      {{!-- <label class="col-1 col-form-label" for="status">分類:</label> --}}
+      <label class="col-1 col-form-label" for="status">C:</label>
       <div class="col-11">
         <select class="form-control" name="status" id="status">
-          <option value="construction" selected>道路施工</option>
+          {{!-- <option value="construction" selected>道路施工</option> --}}
+          {{#each allCategory}}
+          <option value={{accidentValue}}>{{accidentText}}</option>
+          {{/each}}
+          {{!-- <option value="construction" selected>R_construct</option>
           <option value="carAccident">車禍</option>
-          <option value="signalLightFailure">號誌燈失靈</option>
+          <option value="signalLightFailure">號誌燈故障</option>
           <option value="parkingSideBySide">並排停車</option>
           <option value="roadClosed">道路封閉</option>
-          <option value="others">其他</option>
+          <option value="others">其他</option> --}}
         </select>
       </div>      
     </div>
     <div class="form-group">
-      <h5>說明: *</h5>
+      {{!-- <h5>說明: *</h5> --}}
+      <h5>E: *</h5>
       <textarea class="form-control" name="body" id="body" required></textarea>
     </div>
 
     <span>* 必填欄位</span>
     <div class="form-group">
       <input type="submit" value="Save" class="btn">
-      <a href="/dashboard" class="btn orange">Cancel</a>
+      <a href="/linkou" class="btn orange">Cancel</a>
     </div>
 </form>

@@ -28,20 +28,20 @@
         crossorigin="anonymous"></script>
 
     <script>
-        let notification;
+        let CKEDITOR_notification;
         const editor = CKEDITOR.replace("body", {
             plugins: "wysiwygarea, toolbar, basicstyles, link",
             extraPlugins: 'notification'
         });
         editor.once( 'instanceReady', function(){
           // Create and show the notification.
-          notification = new CKEDITOR.plugins.notification(editor,{
+          CKEDITOR_notification = new CKEDITOR.plugins.notification(editor,{
             message: '請填寫這個欄位。',
             type: 'info'
           });
         } );
         editor.on("required", function(e){          
-          notification.show();
+          CKEDITOR_notification.show();
           editor.focus();
           e.cancel();
         });
