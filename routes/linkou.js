@@ -13,8 +13,7 @@ router.get("/", ensureAuth, (req, res) => {
 //@route    GET /stories/add
 router.get("/add", ensureAuth, async (req, res) => {
   try {
-    let allCategory = await AccidentCategory.find({}).lean();
-    console.log("!@$@@#!", allCategory);
+    let allCategory = await AccidentCategory.find().lean();
     res.render("stories/add", { allCategory });
   } catch (err) {
     console.error(err);
@@ -27,6 +26,11 @@ router.get("/add", ensureAuth, async (req, res) => {
 router.post("/", ensureAuth, async (req, res) => {
   try {
     req.body.user = req.user.id;
+    let category = await AccidentCategory.findOne({
+      accidentValue: req.body.trafficCategory,
+    });
+    console.log("@#$@#", category);
+    req.body.trafficCategory = category._id;
     await Traffic.create(req.body);
     res.redirect("linkou");
   } catch (err) {

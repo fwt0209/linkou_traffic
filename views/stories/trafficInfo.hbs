@@ -58,12 +58,35 @@
     </div>
   </div>
   <div class="col-5 box">
-    <div class="clock">YYYY/MM/DD HH:MI:SS</div>
-    <div class="realTime-weather-section">
-      <h3>OXOX</h3>
-      {{!-- <div id="realTime-weather"></div> --}}
-      <div>fst</div>
-      <div>snd</div>
+    <div class="row pl-3 flex_direction">
+        <div class="clock">YYYY/MM/DD HH:MI:SS</div>
+        <div class="realTime-weather-section">
+          <h3>OXOX</h3>
+          {{!-- <div id="realTime-weather"></div> --}}
+          <div>fst</div>
+          <div>snd</div>
+        </div>
+    </div>
+    <div class="row">
+
     </div>
   </div>
 </div>
+
+<script src="/js/clock.js"></script>
+<script src="/js/cwbForecastWeatherAPI.js"></script>
+<script src="/js/cwbRealTimeWeatherAPI.js"></script>
+<script src="/js/googleMap.js"></script>
+<script>
+  const body = document.addEventListener("DOMContentLoaded", init);
+      function init(){
+        // const APIKey = "CWB-3368DCAB-74F5-4D48-82F3-DA9B5699CE79";
+        const distsTarget = ["林口", "龜山"];
+        let w = new RealTimeWeather(
+          document.querySelector("#realTime-weather"),
+          distsTarget,
+          APIKey
+        );
+        startTime();      
+      }
+</script>

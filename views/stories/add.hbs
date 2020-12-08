@@ -16,19 +16,16 @@
     </div>
     <div class="row form-group">
       {{!-- <label class="col-1 col-form-label" for="status">分類:</label> --}}
-      <label class="col-1 col-form-label" for="status">C:</label>
+      <label class="col-1 col-form-label" for="trafficCategory">C:</label>
       <div class="col-11">
-        <select class="form-control" name="status" id="status">
-          {{!-- <option value="construction" selected>道路施工</option> --}}
+        <select class="form-control" name="trafficCategory" id="trafficCategory">
+          
           {{#each allCategory}}
-          <option value={{accidentValue}}>{{accidentText}}</option>
+          <option value={{accidentValue}} 
+            {{#if selected}} selected{{/if}}>
+            {{accidentText}}
+          </option>
           {{/each}}
-          {{!-- <option value="construction" selected>R_construct</option>
-          <option value="carAccident">車禍</option>
-          <option value="signalLightFailure">號誌燈故障</option>
-          <option value="parkingSideBySide">並排停車</option>
-          <option value="roadClosed">道路封閉</option>
-          <option value="others">其他</option> --}}
         </select>
       </div>      
     </div>
