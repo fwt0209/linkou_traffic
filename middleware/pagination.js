@@ -11,18 +11,23 @@ function paginator(model) {
     if (endIndex < (await model.countDocuments().exec())) {
       results.next = {
         page: page + 1,
-        limit: limit,
+        // limit: limit,
       };
     }
 
     if (startIndex > 0) {
       results.previous = {
         page: page - 1,
-        limit: limit,
+        // limit: limit,
       };
     }
     try {
-      results.results = await model.find().limit(limit).skip(startIndex).lean();
+      results.results = await model
+        .find()
+        .limit(limit)
+        .skip(startIndex)
+        .lean()
+        .exec();
       res.paginatedResults = results;
       next();
     } catch (e) {
