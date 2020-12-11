@@ -68,7 +68,7 @@
         </div>
     </div>
     <div class="row">
-
+      <div id="traffic_board"></div>
     </div>
   </div>
 </div>
@@ -87,6 +87,25 @@
           distsTarget,
           APIKey
         );
-        startTime();      
+        startTime();  
+        board(1);    
       }
+
+
+      function board(page){
+        $.ajax({     
+          type: "GET",
+          url: "/linkou/test",
+          data: {page: page},
+          dataType: "json",
+          contentType: "application/json; charset=utf-8",
+          error: function (e) {
+          console.log("error:", e);
+          },
+          success: function (result) {
+            console.log("data:",result);
+          },
+        });
+      }
+
 </script>

@@ -10,9 +10,10 @@ const traffic = require("../models/traffic");
 router.get("/test", paginator(Traffic), async (req, res) => {
   const page = res.paginatedResults;
   console.log(page);
-  res.render("stories/test", { page });
+  // res.render("stories/test", { page });
 });
 router.post("/test", async (req, res) => {
+  console.log(req);
   traffic
     .updateOne({
       location: "ww",
