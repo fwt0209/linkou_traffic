@@ -1,0 +1,8 @@
+{{#each page.results}}
+<div>{{_id}}</div>
+{{/each}}
+<a  
+{{#if page.next}} 
+  href="/linkou/test?page={{page.next.page}}&limit=4" 
+  page={{page.next.page}} 
+{{/if}}>next</a>

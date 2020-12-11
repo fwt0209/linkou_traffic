@@ -1,9 +1,29 @@
 const express = require("express");
 const router = express.Router();
 const { ensureAuth } = require("../middleware/auth");
+const { paginator } = require("../middleware/pagination");
 
 const Traffic = require("../models/traffic");
 const AccidentCategory = require("../models/accidentCategory");
+const traffic = require("../models/traffic");
+
+router.get("/test", paginator(Traffic), async (req, res) => {
+  const page = res.paginatedResults;
+  console.log(page);
+  res.render("stories/test", { page });
+});
+router.post("/test", async (req, res) => {
+  traffic
+    .updateOne({
+      location: "ww",
+      finished: false,
+      body: "<p>hello!?</p>",
+      user: "5f9f622522c04355c86b8e88",
+      trafficCategory: "5fcee4da7a8340e07c14c74b",
+    })
+    .where("_id", "5fd2d8a4d4675f5998a2b5ab")
+    .exec();
+});
 
 router.get("/", ensureAuth, (req, res) => {
   res.render("stories/trafficInfo.hbs");
@@ -29,7 +49,7 @@ router.post("/", ensureAuth, async (req, res) => {
     let category = await AccidentCategory.findOne({
       accidentValue: req.body.trafficCategory,
     });
-    console.log("@#$@#", category);
+
     req.body.trafficCategory = category._id;
     await Traffic.create(req.body);
     res.redirect("linkou");

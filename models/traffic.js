@@ -9,6 +9,7 @@ const TrafficSchema = new mongoose.Schema({
     ref: "accidentCategory",
   },
   body: { type: String, required: true },
+  finished: { type: Boolean, default: true },
   createdAt: { type: Date, default: Date.now },
 });
 
