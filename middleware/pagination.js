@@ -26,6 +26,8 @@ function paginator(model) {
         .find()
         .limit(limit)
         .skip(startIndex)
+        .populate('accidentCategory')
+        .populate('user')
         .lean()
         .exec();
       res.paginatedResults = results;

@@ -9,8 +9,8 @@ const traffic = require("../models/traffic");
 
 router.get("/test", paginator(Traffic), async (req, res) => {
   const page = res.paginatedResults;
-  console.log(page);
-  // res.render("stories/test", { page });
+  // console.log(page);
+  res.json(page);
 });
 router.post("/test", async (req, res) => {
   console.log(req);

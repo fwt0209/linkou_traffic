@@ -4,7 +4,7 @@ const collectionName = "Traffics";
 const TrafficSchema = new mongoose.Schema({
   user: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
   location: { type: String, required: true },
-  trafficCategory: {
+  accidentCategory: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "accidentCategory",
   },
