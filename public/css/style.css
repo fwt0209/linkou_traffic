@@ -5,6 +5,22 @@
   border: 0;
 }
 
+.category_lable{
+  height: 30px;
+  width: 60px;
+  display: inline-block;
+  padding: .2em .4em;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25rem;
+}
+
+.category_attention{
+  color: aliceblue;
+  background-color: brown;
+}
+
 .container {
   max-width: 1204px;
 }
