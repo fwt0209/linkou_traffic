@@ -48,10 +48,10 @@ router.post("/", ensureAuth, async (req, res) => {
   try {
     req.body.user = req.user.id;
     let category = await AccidentCategory.findOne({
-      accidentValue: req.body.trafficCategory,
+      accidentValue: req.body.trafficSelector,
     });
 
-    req.body.trafficCategory = category._id;
+    req.body.accidentCategory = category._id;
     await Traffic.create(req.body);
     res.redirect("linkou");
   } catch (err) {

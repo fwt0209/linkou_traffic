@@ -30,8 +30,8 @@ function paginator(model) {
         .skip(startIndex)
         .populate("accidentCategory")
         .populate("user")
-        .where("createdAt")
-        .gte()
+        // .where("createdAt")
+        // .gte()
         .sort({ "createdAt": 'desc' })
         .lean()
         .exec();

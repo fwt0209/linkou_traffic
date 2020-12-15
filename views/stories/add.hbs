@@ -5,39 +5,39 @@
   {{!-- 謝謝您為彼此分享路況。 --}}
   OOOO
 </div>
-<form  class="pt-3" action="/linkou" method="post">
-    <div class="row form-group">          
-      {{!-- <label class="col-1 col-form-label" for="location">位置: *</label>             --}}
-      <label class="col-1 col-form-label" for="location">L: *</label>            
-      <div class="col-11">
-        {{!-- <input class="form-control" type="text" id="location" name="location" value="" required placeholder="ex: 文化一路/國道南下路口，往長庚醫院方向">   --}}
-        <input class="form-control" type="text" id="location" name="location" value="" required placeholder="">  
-      </div>
+<form class="pt-3" action="/linkou" method="post">
+  <div class="row form-group">
+    {{!-- <label class="col-1 col-form-label" for="location">位置: *</label> --}}
+    <label class="col-1 col-form-label" for="location">L: *</label>
+    <div class="col-11">
+      {{!-- <input class="form-control" type="text" id="location" name="location" value="" required
+        placeholder="ex: 文化一路/國道南下路口，往長庚醫院方向"> --}}
+      <input class="form-control" type="text" id="location" name="location" value="" required placeholder="">
     </div>
-    <div class="row form-group">
-      {{!-- <label class="col-1 col-form-label" for="status">分類:</label> --}}
-      <label class="col-1 col-form-label" for="trafficCategory">C:</label>
-      <div class="col-11">
-        <select class="form-control" name="trafficCategory" id="trafficCategory">
-          
-          {{#each allCategory}}
-          <option value={{accidentValue}} 
-            {{#if selected}} selected{{/if}}>
-            {{accidentText}}
-          </option>
-          {{/each}}
-        </select>
-      </div>      
-    </div>
-    <div class="form-group">
-      {{!-- <h5>說明: *</h5> --}}
-      <h5>E: *</h5>
-      <textarea class="form-control" name="body" id="body" required></textarea>
-    </div>
+  </div>
+  <div class="row form-group">
+    {{!-- <label class="col-1 col-form-label" for="status">分類:</label> --}}
+    <label class="col-1 col-form-label" for="trafficSelector">C:</label>
+    <div class="col-11">
+      <select class="form-control" name="trafficSelector" id="trafficSelector">
 
-    <span>* 必填欄位</span>
-    <div class="form-group">
-      <input type="submit" value="Save" class="btn">
-      <a href="/linkou" class="btn orange">Cancel</a>
+        {{#each allCategory}}
+        <option value={{accidentValue}} {{#if selected}} selected{{/if}}>
+          {{accidentText}}
+        </option>
+        {{/each}}
+      </select>
     </div>
+  </div>
+  <div class="form-group">
+    {{!-- <h5>說明: *</h5> --}}
+    <h5>E: *</h5>
+    <textarea class="form-control" name="body" id="body" required></textarea>
+  </div>
+
+  <span>* 必填欄位</span>
+  <div class="form-group">
+    <input type="submit" value="Save" class="btn">
+    <a href="/linkou" class="btn orange">Cancel</a>
+  </div>
 </form>

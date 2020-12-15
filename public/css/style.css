@@ -17,6 +17,10 @@
   flex-shrink: 0;
 }
 
+#map {
+  height: 100%;
+}
+
 .flex_card_title {
   display: flex;
 }
