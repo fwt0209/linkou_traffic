@@ -21,6 +21,8 @@ function paginator(model) {
         // limit: limit,
       };
     }
+    let localDateTime = new Date();
+    let passed7days = localDateTime.setDate(-7);
     try {
       results.results = await model
         .find()
@@ -28,6 +30,9 @@ function paginator(model) {
         .skip(startIndex)
         .populate("accidentCategory")
         .populate("user")
+        .where("createdAt")
+        .gte()
+        .sort({ "createdAt": 'desc' })
         .lean()
         .exec();
       res.paginatedResults = results;
