@@ -1,7 +1,7 @@
 function paginator(model) {
   return async (req, res, next) => {
     const page = parseInt(req.query.page);
-    const limit = 3;
+    const limit = 5;
 
     const startIndex = (page - 1) * limit;
     const endIndex = page * limit;
@@ -26,8 +26,8 @@ function paginator(model) {
         .find()
         .limit(limit)
         .skip(startIndex)
-        .populate('accidentCategory')
-        .populate('user')
+        .populate("accidentCategory")
+        .populate("user")
         .lean()
         .exec();
       res.paginatedResults = results;

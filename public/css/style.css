@@ -7,26 +7,41 @@
 
 .category_tag {
   height: 40px;
-  width: 60px;
+  width: 95px;
   display: inline-block;
   padding: 0.5em 0.4em;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: 0.25rem;
+  flex-shrink: 0;
+}
+
+.flex_card_title {
+  display: flex;
+}
+
+.card_header_padding {
+  padding-left: 6px;
+}
+.card_title_padding {
+  padding-left: 15px;
+}
+.btn_margin {
+  margin-left: 15px;
 }
 
 .category_attention {
   color: aliceblue;
-  background-color: brown;
+  background-color: greenyellow;
 }
 .category_other {
   color: aliceblue;
-  background-color:cornflowerblue;
+  background-color: cornflowerblue;
 }
 
 .container {
-  max-width: 1204px;
+  max-width: 1184px;
 }
 
 .box {
@@ -39,7 +54,7 @@ iframe {
   display: block;
 }
 
-.flex_direction {
+.flex_column_direction {
   flex-direction: column;
 }
 
