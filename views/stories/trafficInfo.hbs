@@ -80,22 +80,31 @@
       <div class="col">
         <div id="traffic_board">
 
-          {{!-- <div class="card mb-2">
+          <div class="card mb-2">
             <div class="card-header">
               <img class="rounded-circle " style="max-width: 30px;"
                 src="https://lh3.googleusercontent.com/a-/AOh14GgV5uPp3SX0JwKNfrE1b9LBNEXPjwMHxaV-Da3G5A=s96-c" alt=""
                 srcset="">
               <span class="card_header_padding">Kev</span>
             </div>
-            <div class="card-body">
-              <div class="card-title flex_card_title">
-                <span class="category_tag category_attention">注意</span>
-                <h6 class="card_title_padding">[07:31]</h6>
-                <h6 class="card_title_padding">文化一路一段, 北上交流道口測試測試測試測試測試測試測試測試測試</h6>
+            <div class="card-body" style="display: flex;">
+              <div>
+                <div class="card-title flex_card_title">
+                  <span class="category_tag category_attention">注意</span>
+                  <h6 class="card_title_padding">[07:31]</h6>
+                  <h6 class="card_title_padding">正正正正正正正正正正正正正正正正正正正正正正正正正正</h6>
+                </div>
+                <p class="card-text">abcdefghijk</p>
               </div>
-              <p class="card-text">並行停車，雍塞</p>
-            </div>
-          </div> --}}
+              <div>
+                <button style="width: 4em; height: 100%;">
+                  <i class="fas fa-tools" style="display:block; width: 100%;"></i>
+                   排除 
+                </button>
+              </div>     
+
+            </div>   
+          </div>
 
           <div class="card text-center mb-2">
             <div class="card-body">
@@ -151,8 +160,7 @@
         console.log("error:", e);
       },
       success: function (result) {
-        console.log("data:", result);
-        trafficBoard.innerHTML = "";
+        console.log("data:", result);        
         previousPageBtn.setAttribute("page", "");
         nextPageBtn.setAttribute("page", "");
 
@@ -180,6 +188,7 @@
         }
 
         if (0 !== result.results.length) {
+          trafficBoard.innerHTML = "";
           let fragment = document.createDocumentFragment();
 
           for (x of result.results) {
