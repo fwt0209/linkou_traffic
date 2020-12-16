@@ -5,6 +5,10 @@
   border: 0;
 }
 
+.blue{
+  background-color: #3498DB;
+}
+
 .category_tag {
   height: 40px;
   width: 95px;
@@ -35,17 +39,37 @@
   margin-left: 15px;
 }
 
-.category_attention {
+.aaa {
   color: aliceblue;
   background-color: greenyellow;
 }
-.category_other {
+.others {
   color: aliceblue;
   background-color: cornflowerblue;
 }
+.roadClosed{
+  color: aliceblue;
+  background-color:darkgreen;
+}
+.parkingSideBySide{
+  color: aliceblue;
+  background-color:lightcoral;
+}
+.signalLightFailure{
+  color: aliceblue;
+  background-color:lightskyblue;
+}
+.carAccident{
+  color: aliceblue;
+  background-color:orange;
+}
+.construction{
+  color: aliceblue;
+  background-color:salmon;
+}
 
 .container {
-  max-width: 1184px;
+  max-width: 1140px;
 }
 
 .box {
