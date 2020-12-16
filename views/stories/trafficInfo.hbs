@@ -123,6 +123,12 @@
   let previousPageBtn = document.getElementById("previous_page_btn");
   let nextPageBtn = document.getElementById("next_page_btn");
   let trafficBoard = document.getElementById("traffic_board");
+  previousPageBtn.addEventListener("click", function () {
+    board(previousPageBtn.getAttribute("page"));
+  })
+  nextPageBtn.addEventListener("click", function () {
+    board(nextPageBtn.getAttribute("page"));
+  })
 
   const body = document.addEventListener("DOMContentLoaded", init);
   function init() {
@@ -163,17 +169,10 @@
         if (undefined !== result.previous) {
           previousPageBtn.classList.remove("disabled");
           previousPageBtn.setAttribute("page", result.previous.page);
-          previousPageBtn.addEventListener("click", function () {
-            board(previousPageBtn.getAttribute("page"));
-          })
         }
         if (undefined !== result.next) {
           nextPageBtn.classList.remove("disabled");
           nextPageBtn.setAttribute("page", result.next.page);
-          nextPageBtn.addEventListener("click", function () {
-            console.log(nextPageBtn.page);
-            board(nextPageBtn.getAttribute("page"));
-          })
         }
 
         if (0 !== result.results.length) {
