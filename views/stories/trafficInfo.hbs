@@ -19,7 +19,7 @@
           <div class="card-body">
             {{!-- <div id="map" style="height: 243px; width: 320px;"></div> --}}
             <iframe
-              {{!-- src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14880.059565918398!2d121.36944460005144!3d25.06414825625926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1591834497114!5m2!1szh-TW!2stw" --}}
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14880.059565918398!2d121.36944460005144!3d25.06414825625926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1591834497114!5m2!1szh-TW!2stw"
               width="400" height="300" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
            
           </div>
@@ -82,7 +82,7 @@
         <div id="traffic_board">
 
           <div class="card mb-2">
-            <div class="card-header">
+            <div class="card-header whiteColor blue">
               <img class="rounded-circle" style="max-width: 30px;"
                 src="https://lh3.googleusercontent.com/a-/AOh14GgV5uPp3SX0JwKNfrE1b9LBNEXPjwMHxaV-Da3G5A=s96-c" alt=""
                 srcset="">
@@ -94,13 +94,13 @@
                 <h6 class="card_title_padding">[07:31]</h6>
                 <h6 class="card_title_padding">正正正正正正正正正正正正正正正正正正正正正正正正正正</h6>
               </div>
-              <p class="card-text">abcdefghijk</p>
+              <div class="p-2 card-text grayContent">abcdefghijk</div>
             </div>
           </div>
 
           <div class="card text-center mb-2">
             <div class="card-body">
-              <p class="card-text">等待回報交通資訊</p>
+              <div class="p-2 card-text grayContent">等待回報交通資訊</div>
             </div>
           </div>
         </div>
@@ -116,13 +116,14 @@
 <script src="./js/clock.js"></script>
 <script src="./js/cwbForecastWeatherAPI.js"></script>
 <script src="./js/cwbRealTimeWeatherAPI.js"></script>
-<script src="./js/googleMap.js"></script>
+{{!-- <script src="./js/googleMap.js"></script> --}}
 {{!-- <script type="module" src="./js/trafficBoard.js"></script> --}}
 <script async defer
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaI5BVp9PApBENibhWc1jXrVmrZUKJtDk&callback=initMap">
   </script>
 
 <script type="module">
+  import {initMap} from "./js/googleMap.js"
   import {board} from "./js/trafficBoard.js"
 
   let previousPageBtn = document.getElementById("previous_page_btn");
@@ -144,6 +145,7 @@
       distsTarget,
       APIKey
     );
+    initMap();
     startTime();
     board(1, trafficBoard, previousPageBtn, nextPageBtn);
   }

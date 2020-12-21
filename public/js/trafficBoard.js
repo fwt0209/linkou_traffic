@@ -36,7 +36,7 @@ function board(page, container, previousPageBtn, nextPageBtn) {
           let card = document.createElement("div");
           card.classList.add("card", "mb-2");
           let cardHeader = document.createElement("div");
-          cardHeader.classList.toggle("card-header");
+          cardHeader.classList.add("card-header", "whiteColor", "blue");
           let userImage = document.createElement("img");
           userImage.classList.toggle("rounded-circle");
           userImage.style.maxWidth = "30px";
@@ -67,8 +67,8 @@ function board(page, container, previousPageBtn, nextPageBtn) {
           roadInformationTag.textContent = x.location;
           cardTitle.appendChild(roadInformationTag);
 
-          let cardTextContent = document.createElement("p");
-          cardTextContent.classList.toggle("card-text");
+          let cardTextContent = document.createElement("div");
+          cardTextContent.classList.add("p-2", "card-text", "grayContent");
           cardTextContent.innerHTML = x.body;
 
           cardBody.appendChild(cardTextContent);

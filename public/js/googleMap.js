@@ -7,3 +7,5 @@ function initMap() {
   var trafficLayer = new google.maps.TrafficLayer();
   trafficLayer.setMap(map);
 }
+
+export { initMap };
