@@ -5,13 +5,13 @@
   border: 0;
 }
 
-.blue{
-  background-color: #3498DB;
+.blue {
+  background-color: #3498db;
 }
 
 .category_tag {
   height: 40px;
-  width: 95px;
+  width: 75px;
   display: inline-block;
   padding: 0.5em 0.4em;
   text-align: center;
@@ -33,7 +33,7 @@
   padding-left: 6px;
 }
 .card_title_padding {
-  padding-left: 15px;
+  padding-left: 8px;
 }
 .btn_margin {
   margin-left: 15px;
@@ -47,25 +47,25 @@
   color: aliceblue;
   background-color: cornflowerblue;
 }
-.roadClosed{
+.roadClosed {
   color: aliceblue;
-  background-color:darkgreen;
+  background-color: darkgreen;
 }
-.parkingSideBySide{
+.parkingSideBySide {
   color: aliceblue;
-  background-color:lightcoral;
+  background-color: lightcoral;
 }
-.signalLightFailure{
+.signalLightFailure {
   color: aliceblue;
-  background-color:lightskyblue;
+  background-color: lightskyblue;
 }
-.carAccident{
+.carAccident {
   color: aliceblue;
-  background-color:orange;
+  background-color: orange;
 }
-.construction{
+.construction {
   color: aliceblue;
-  background-color:salmon;
+  background-color: salmon;
 }
 
 .container {
