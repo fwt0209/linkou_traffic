@@ -7,7 +7,7 @@ const Traffic = require("../models/traffic");
 const AccidentCategory = require("../models/accidentCategory");
 const traffic = require("../models/traffic");
 
-router.get("/test", paginator(Traffic), async (req, res) => {
+router.get("/test", ensureAuth, paginator(Traffic), async (req, res) => {
   const page = res.paginatedResults;
   // console.log(page);
   res.json(page);
