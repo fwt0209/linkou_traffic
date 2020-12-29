@@ -1,7 +1,7 @@
 function board(page, container, previousPageBtn, nextPageBtn) {
   $.ajax({
     type: "GET",
-    url: "/linkou/test",
+    url: "/dashboard/trafficMessages",
     data: { page: page },
     dataType: "json",
     contentType: "application/json; charset=utf-8",

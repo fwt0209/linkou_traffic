@@ -95,9 +95,7 @@ const db = mongoose.connection;
 app.use("/", require("./routes/index"));
 app.use("/auth", require("./routes/auth"));
 app.use("/stories", require("./routes/stories"));
-app.use("/linkou", require("./routes/linkou"));
-app.use("/todos", require("./routes/todos"));
-app.use("/family", require("./routes/family"));
+app.use("/dashboard", require("./routes/dashboard"));
 
 const PORT = process.env.PORT || 5000;
 

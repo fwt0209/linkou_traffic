@@ -7,7 +7,7 @@ const Traffic = require("../models/traffic");
 const AccidentCategory = require("../models/accidentCategory");
 const traffic = require("../models/traffic");
 
-router.get("/test", ensureAuth, paginator(Traffic), async (req, res) => {
+router.get("/trafficMessages", ensureAuth, paginator(Traffic), async (req, res) => {
   const page = res.paginatedResults;
   // console.log(page);
   res.json(page);
@@ -27,7 +27,9 @@ router.post("/test", async (req, res) => {
 });
 
 router.get("/", ensureAuth, (req, res) => {
-  res.render("stories/trafficInfo.hbs");
+  res.render("dashboard.hbs", {
+    name: req.user.firstName
+  });
 });
 
 //@desc     Show add page
@@ -53,7 +55,7 @@ router.post("/", ensureAuth, async (req, res) => {
 
     req.body.accidentCategory = category._id;
     await Traffic.create(req.body);
-    res.redirect("linkou");
+    res.redirect("dashboard");
   } catch (err) {
     console.error(err);
     res.render("error/500");
