@@ -98,6 +98,9 @@ p {
   margin: 10px 0 !important;
 }
 
+.welcome{
+  padding-top: 70px !important; 
+}
 .login-container {
   width: 450px;
   margin-top: 50px;
