@@ -1,8 +1,9 @@
-<div class="d-flex justify-content-end pt-5">
+<div class="d-flex justify-content-between pt-5">
+  <h3>Welcome {{name}}</h3>
   <div class="clock pt-5">YYYY/MM/DD HH:MI:SS</div>
 </div>
 <div class="row pt-3">
-  <div class="col-8 pb-3 box">
+  <div class="col-xl-8 col-lg-7 pb-3 box">
     <div class="row flex_column_direction">
       {{!-- <h3>X X O O</h3> --}}
       <div id="forecast-weather"></div>
@@ -10,7 +11,7 @@
       {{!-- <div>snd</div> --}}
     </div>
     <div class="row pt-3">
-      <div class="col-6">
+      <div class="col-lg col-md col-sm">
         <div class="card ">
           <div class="card-header">
             {{!-- <h5 class="card-title">X X O O</h5> --}}
@@ -26,7 +27,7 @@
           </div>
         </div>
       </div>
-      <div class="col-6">
+      <div class="col-lg col-md col-sm">
         <div class="card ">
           <div class="card-header">
             <h5 class="rounded-top">文化一路一段/麗園一街口</h5>
@@ -40,18 +41,19 @@
       </div>
     </div>
     <div class="row pt-3">
-      <div class="col-6">
+      <div class="col-lg col-md col-sm">
         <div class="card ">
           <div class="card-header">
             <h5 class="rounded-top">文化一路一段/忠孝路口</h5>
             {{!-- <h5>X X O O</h5> --}}
           </div>
           <div class="card-body">
-            <iframe src="http://atis.ntpc.gov.tw/ATIS/ShowFrame4CCTV/C000264" frameborder="0"></iframe>
+            <iframe src="http://117.56.58.2/LiveVideo.html?deviceid=2&account=dmlld2Vy&password=dmlld2Vy"
+              frameborder="0"></iframe>
           </div>
         </div>
       </div>
-      <div class="col-6">
+      <div class="col-lg col-md col-sm">
         <div class="card ">
           <div class="card-header">
             <h5 class="rounded-top">文化一路一段/國道1號南下入口</h5>
@@ -65,7 +67,7 @@
       </div>
     </div>
   </div>
-  <div class="col-4 box">
+  <div class="col-xl-4 col-lg-5 box">
     <div class="row flex_column_direction">
       <div class="realTime-weather-section">
         {{!-- <h3>OXOX</h3> --}}
