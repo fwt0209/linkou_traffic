@@ -99,15 +99,14 @@
 <script src="./js/cwbForecastWeatherAPI.js"></script>
 <script src="./js/cwbRealTimeWeatherAPI.js"></script>
 
-{{!--
-<script src="./js/googleMap.js"></script> --}}
+
+<script src="./js/googleMap.js"></script>
 
 {{!--
 <script type="module" src="./js/trafficBoard.js"></script> --}}
 
 
 <script type="module">
-  import { initMap } from "./js/googleMap.js"
   import { board } from "./js/trafficBoard.js"
 
   let previousPageBtn = document.getElementById("previous_page_btn");
@@ -129,7 +128,6 @@
       distsTarget,
       APIKey
     );
-    initMap();
     startTime();
     board(1, trafficBoard, previousPageBtn, nextPageBtn);
   }

@@ -8,4 +8,4 @@ function initMap() {
   trafficLayer.setMap(map);
 }
 
-export { initMap };
+
