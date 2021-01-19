@@ -82,4 +82,4 @@ function board(page, container, previousPageBtn, nextPageBtn) {
   });
 }
 
-export { board };
+
