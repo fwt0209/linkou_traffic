@@ -1,6 +1,6 @@
 <div class="d-flex justify-content-between pt-5 welcome">
   <h3>Welcome {{name}}</h3>
-  <div class="clock pt-5">YYYY/MM/DD HH:MI:SS</div>
+  {{!-- <div class="clock pt-5">YYYY/MM/DD HH:MI:SS</div> --}}
 </div>
 <div class="row pt-3">
   <div class="col-xl-8 col-lg-7 pb-3 box">
@@ -127,7 +127,7 @@
       distsTarget,
       APIKey
     ); --}}
-    {{!-- startTime(); --}}
+    startTime();
     board(1, trafficBoard, previousPageBtn, nextPageBtn);
   }
 

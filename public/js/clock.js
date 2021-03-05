@@ -2,5 +2,5 @@ function startTime() {
   let clock = document.querySelector(".clock");
   let date = new Date().toLocaleString("zh-TW", { timeZone: "Asia/Taipei" });
   clock.textContent = date;
-  setInterval(startTime, 1000);
+  setTimeout(startTime, 1000);
 }
