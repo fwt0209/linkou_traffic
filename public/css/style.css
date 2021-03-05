@@ -98,8 +98,8 @@ p {
   margin: 10px 0 !important;
 }
 
-.welcome{
-  padding-top: 70px !important; 
+.welcome {
+  padding-top: 70px !important;
 }
 .login-container {
   width: 450px;
@@ -123,7 +123,7 @@ p {
 .fixed-btn {
   position: fixed;
   right: 50px;
-  bottom: 50px;
+  bottom: 70px;
   z-index: 997;
 }
 
@@ -140,4 +140,12 @@ p {
 
 .add_btn:hover {
   color: white;
+}
+
+.footer_list {
+  list-style: none;
+}
+.footer_list_item {
+  display: inline-block;
+  margin-right: 0.5rem;
 }
