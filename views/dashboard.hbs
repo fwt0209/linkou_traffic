@@ -1,5 +1,5 @@
 <div class="d-flex justify-content-between pt-5 welcome">
-  {{!-- <h3>Welcome {{name}}</h3> --}}
+  <h3>Welcome {{name}}</h3>
   <div class="clock pt-5">YYYY/MM/DD HH:MI:SS</div>
 </div>
 <div class="row py-3">
@@ -14,14 +14,14 @@
       <div class="col-lg col-md col-sm">
         <div class="card ">
           <div class="card-header">
-            <h5 class="card-title">X X O O</h5>
-            {{!-- <h5 class="card-title">即時路況</h5> --}}
+            {{!-- <h5 class="card-title">X X O O</h5> --}}
+            <h5 class="card-title">即時路況</h5>
           </div>
           <div class="card-body">
-            {{!-- <div id="map" style="height: 243px; width: 320px;"></div> --}}
-            <iframe
-              {{!-- src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14880.059565918398!2d121.36944460005144!3d25.06414825625926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1591834497114!5m2!1szh-TW!2stw" --}}
-              width="400" height="300" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <div id="map" style="height: 243px; width: 320px;"></div>
+            {{!-- <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14880.059565918398!2d121.36944460005144!3d25.06414825625926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1591834497114!5m2!1szh-TW!2stw"
+              width="400" height="300" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> --}}
            
 
           </div>
@@ -30,12 +30,12 @@
       <div class="col-lg col-md col-sm">
         <div class="card ">
           <div class="card-header">
-            {{!-- <h5 class="rounded-top">文化一路一段/麗園一街口</h5> --}}
-            <h5>X X O O</h5>
+            <h5 class="rounded-top">文化一路一段/麗園一街口</h5>
+            {{!-- <h5>X X O O</h5> --}}
           </div>
           <div class="card-body">
             <iframe 
-            {{!-- src="http://117.56.58.1/LiveVideo.html?deviceid=48&account=dmlld2Vy&password=dmlld2Vy" --}}
+            src="http://117.56.58.1/LiveVideo.html?deviceid=48&account=dmlld2Vy&password=dmlld2Vy"
               frameborder="0"></iframe>
           </div>
         </div>
@@ -45,12 +45,12 @@
       <div class="col-lg col-md col-sm">
         <div class="card ">
           <div class="card-header">
-            {{!-- <h5 class="rounded-top">文化一路一段/忠孝路口</h5> --}}
-            <h5>X X O O</h5>
+            <h5 class="rounded-top">文化一路一段/忠孝路口</h5>
+            {{!-- <h5>X X O O</h5> --}}
           </div>
           <div class="card-body">
             <iframe 
-            {{!-- src="http://117.56.58.2/LiveVideo.html?deviceid=2&account=dmlld2Vy&password=dmlld2Vy" --}}
+            src="http://117.56.58.2/LiveVideo.html?deviceid=2&account=dmlld2Vy&password=dmlld2Vy"
               frameborder="0"></iframe>
           </div>
         </div>
@@ -58,12 +58,12 @@
       <div class="col-lg col-md col-sm">
         <div class="card ">
           <div class="card-header">
-            {{!-- <h5 class="rounded-top">文化一路一段/國道1號南下入口</h5> --}}
-            <h5>X X O O</h5>
+            <h5 class="rounded-top">文化一路一段/國道1號南下入口</h5>
+            {{!-- <h5>X X O O</h5> --}}
           </div>
           <div class="card-body">
             <iframe 
-            {{!-- src="http://117.56.232.7/LiveVideo.html?deviceid=29&account=dmlld2Vy&password=dmlld2Vy" --}}
+            src="http://117.56.232.7/LiveVideo.html?deviceid=29&account=dmlld2Vy&password=dmlld2Vy"
               frameborder="0"></iframe>
           </div>
         </div>
@@ -131,7 +131,7 @@
       APIKey
     ); --}}
     startTime();
-    {{!-- board(1, trafficBoard, previousPageBtn, nextPageBtn); --}}
+    board(1, trafficBoard, previousPageBtn, nextPageBtn);
   }
 
 
