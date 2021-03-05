@@ -96,8 +96,8 @@
 </div>
 
 <script src="./js/clock.js"></script>
-<script src="./js/cwbForecastWeatherAPI.js"></script>
-<script src="./js/cwbRealTimeWeatherAPI.js"></script>
+{{!-- <script src="./js/cwbForecastWeatherAPI.js"></script> --}}
+{{!-- <script src="./js/cwbRealTimeWeatherAPI.js"></script> --}}
 
 
 <script src="./js/googleMap.js"></script>
@@ -121,14 +121,13 @@
 
   const body = document.addEventListener("DOMContentLoaded", init);
   function init() {
-    //const APIKey = "CWB-3368DCAB-74F5-4D48-82F3-DA9B5699CE79";
     const distsTarget = ["林口", "龜山"];
-    let w = new RealTimeWeather(
+    {{!-- let w = new RealTimeWeather(
       document.querySelector("#realTime-weather"),
       distsTarget,
       APIKey
-    );
-    startTime();
+    ); --}}
+    {{!-- startTime(); --}}
     board(1, trafficBoard, previousPageBtn, nextPageBtn);
   }
 

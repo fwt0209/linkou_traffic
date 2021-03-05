@@ -21,6 +21,7 @@ class RealTimeWeather {
   }
 
   getWeather(dist, apiNo = "O-A0001-001", apiKey = this.aipKey) {
+    console.log(this.aipKey);
     fetch(
       `https://opendata.cwb.gov.tw/api/v1/rest/datastore/${apiNo}?Authorization=${apiKey}&locationName=${dist}`
     ) // 向 requestURL 發送請求
