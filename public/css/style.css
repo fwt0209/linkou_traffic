@@ -123,7 +123,7 @@ p {
 .fixed-btn {
   position: fixed;
   right: 50px;
-  bottom: 130px;
+  bottom: 110px;
   z-index: 997;
 }
 
