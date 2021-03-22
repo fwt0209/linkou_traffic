@@ -9,7 +9,6 @@ function board(page, container, previousPageBtn, nextPageBtn) {
       console.log("error:", e);
     },
     success: function (result) {
-      console.log("data:", result);
       previousPageBtn.setAttribute("page", "");
       nextPageBtn.setAttribute("page", "");
 
@@ -81,5 +80,3 @@ function board(page, container, previousPageBtn, nextPageBtn) {
     },
   });
 }
-
-
