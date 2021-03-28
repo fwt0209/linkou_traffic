@@ -93,7 +93,6 @@
     </div>
   </div>
 </div>
-
 <script src="./js/clock.js"></script>
 {{!--
 <script src="./js/cwbForecastWeatherAPI.js"></script> --}}
@@ -107,8 +106,8 @@
 <script src="./js/trafficBoard.js"></script>
 
 
-<script>
 
+<script>
 
   let previousPageBtn = document.getElementById("previous_page_btn");
   let nextPageBtn = document.getElementById("next_page_btn");
@@ -125,12 +124,14 @@
     const distsTarget = ["林口", "龜山"];
     {
       {
-        !--let w = new RealTimeWeather(
-          document.querySelector("#realTime-weather"),
-          distsTarget,
-          APIKey
-        ); --}
+        !--
+          let w = new RealTimeWeather(
+            document.querySelector("#realTime-weather"),
+            distsTarget,
+            APIKey
+          ); --}
     }
+
     startTime();
     board(1, trafficBoard, previousPageBtn, nextPageBtn);
   }
