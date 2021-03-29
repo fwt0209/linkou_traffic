@@ -26,6 +26,7 @@ function paginator(model) {
     let thisMonth = localDateTime.getMonth();
     let todayDate = localDateTime.getDate();
     let passed1days = new Date(thisYear, thisMonth, todayDate);
+
     console.log(passed1days)
     try {
       results.results = await model
