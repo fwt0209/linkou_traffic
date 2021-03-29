@@ -25,7 +25,7 @@ function paginator(model) {
     let thisYear = localDateTime.getFullYear();
     let thisMonth = localDateTime.getMonth();
     let todayDate = localDateTime.getDate();
-    let passed1days = new Date(thisYear, thisMonth, todayDate);
+    let passed1days = new Date(thisYear, thisMonth, todayDate, +1);
 
     console.log(passed1days)
     try {
