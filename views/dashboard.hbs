@@ -122,12 +122,15 @@
   const body = document.addEventListener("DOMContentLoaded", init);
   function init() {
     const distsTarget = ["林口", "龜山"];
-    {{!--
-          let w = new RealTimeWeather(
-            document.querySelector("#realTime-weather"),
-            distsTarget,
-            APIKey
-          ); --}}
+    {
+      {
+        !--
+        let w = new RealTimeWeather(
+          document.querySelector("#realTime-weather"),
+          distsTarget,
+          APIKey
+        ); --}
+    }
 
     startTime();
     board(1, trafficBoard, previousPageBtn, nextPageBtn);
